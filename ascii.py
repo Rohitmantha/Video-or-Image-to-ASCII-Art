@@ -1,10 +1,10 @@
 from PIL import Image,ImageDraw
-def imgtoascii(path,count):
+def imgtoascii(path,count,role):
 
     img=Image.open(path).convert('RGB')
     width,height=img.size
     print(width,height)
-    img=img.resize((int(width/6),int(height/17)))
+    img=img.resize((int(width/4),int(height/14)))
     pix=img.load()
     width,height=img.size
 
@@ -19,5 +19,8 @@ def imgtoascii(path,count):
             t=int((r+g+b)/3)
             ind=int((t/255)*l)
             d.text((j*6,i*17),chars[ind-1],(r,g,b))
-    outputimg.save("./.temp/asciiframes/%d_output.jpg"%count)
+    if(role==1):
+        outputimg.save("./%d_output_ascii.jpg"%count)
+    else:
+        outputimg.save("./.temp/asciiframes/%d_output.jpg"%count)
 
