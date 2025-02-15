@@ -1,7 +1,7 @@
 
-# Image or Video to ASCII Video and Image
+# Image or Video into ASCII Video and Image Artform
 
-To convert any basic image or video into their ASCII version
+To convert any basic image or video into their ASCII Artform version
 
 
 
